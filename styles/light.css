@@ -3,10 +3,576 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
+    --background-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --h2-color: #353430;
+    --h3-color: #353430;
+    /* --focus-color: ; */
+    /* var(--h2-color) */
+  }
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-color: var(--background-color);
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: url('images/cover-image-light.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 1024px;
+  --accent-color: #ff8dcb;
+  --text-color: #353430;
+  --background-color: #fff1f7;
+  --title-color: #ffc2e6;
+  --h2-color: #353430;
+  --h3-color: #353430;
+}
+
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+
+.header {
+  max-width: 1024px;
+  position: relative;
+}
+
+.header__theme-menu {
+  height: 46px;
+  display: grid;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-self: center;
+}
+
+.header__theme-menu-item {
+  margin-right: 23px;
+}
+
+.header__theme-menu-list:last-child {
+  margin-right: 0;
+}
+
+.header__theme-menu-button {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--h2-color);
+  background-color: var(--background-color);
+  border: 1px solid #353430;
+  padding: 1, 5px 13px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(50, 49, 45, 0.4);
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+h3 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--h3-color);
+}
+
+.title {
+  max-width: 984px;
+  height: 768px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  gap: 114px;
+  grid-template-areas:
+    '.'
+    'title__h1'
+    'title__description'
+}
+
+.title__h1 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 157px;
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 #ff0070;
+  grid-area: title__h1;
+}
+
+p.title__description {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: #000028;
+  background-color: var(--accent-color);
+  grid-area: title__description;
+  max-height: 71px;
+  max-width: 491px;
+  justify-self: flex-end;
+}
+
+/* h46 */
+
+.first--rectangle {
+  border-right: 1px solid var(--h2-color);
+  border-top: 1px solid var(--h2-color);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  /* left: auto; */
+  right: 20px;
+  top: 20px;
+}
+
+.theme_light .first--rectangle__rec {
+  display: none;
+}
+
+.first--rectangle__footer {
+  border-right: 1px solid var(--h2-color);
+  border-top: 1px solid var(--h2-color);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  /* left: auto; */
+  right: 20px;
+  top: 20px;
+}
+
+.second--rectangle {
+  border-bottom: 1px solid var(--h2-color);
+  border-left: 1px solid var(--h2-color);
+  width: 25px;
+  height: 25px;
+  left: 20px;
+  bottom: 20px;
+}
+
+h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--h2-color);
+}
+
+p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--text-color);
+}
+
+/* 999 */
+.why {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 984px;
+  margin-bottom: 80px;
+  margin-top: 60px;
+}
+
+.why__title {
+  margin-right: 20px;
+  width: 285px;
+  height: 47px;
+}
+
+/* 649 */
+
+.why__cover {
+  max-width: 649px;
+}
+
+.why__block {
+  margin-bottom: 20px;
+}
+
+.why__cover:last-child {
+  margin-bottom: 0;
+}
+
+.why__block-title {
+  background-color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.what {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 984px;
+}
+
+.what__title {
+  width: 315px;
+  margin-bottom: 20px;
+}
+
+.what__cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+
+.what__block--title {
+  background-color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+a {
+  text-shadow: var(--accent-color) 2px 0px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+a:focus {
+  outline: 0;
+}
+
+a:focus-visible {
+  border: 1px solid var(--text-color);
+  width: 97px;
+  height: 22px;
+}
+
+.how {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 80px;
+  max-width: 978px;
+}
+
+.how__title {
+  max-width: 315px;
+  margin-right: 20px;
+}
+
+.how__cover {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content max-content max-content max-content max-content max-content;
+}
+
+.how__block {
+  max-width: 649px;
+}
+
+.how__secondtitle {
+  background-color: var(--accent-color);
+}
+
+.how__block--title {
+  background-color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+/* clamp(18px, 2.2vw, 3.6rem) */
+
+.picures {
+  max-width: 984px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 60px;
+}
+
+.pictures__cover {
+  max-width: 984px;
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: calc(1fr * 0, 825) 1fr calc(1fr * 1, 36);
+  display: grid;
+  grid-template-areas:
+    'sunset sunset ice-cream'
+    'tape books ice-cream'
+    'tape street street'
+}
+
+.pictures__sunset {
+  width: 100%;
+  height: 100%;
+  grid-area: sunset;
+}
+
+/* 229, 315 */
+.pictures__ice-cream {
+  width: 100%;
+  height: 100%;
+  grid-area: ice-cream;
+  object-fit: cover;
+}
+
+.pictures__street {
+  width: 100%;
+  height: 100%;
+  grid-area: street;
+}
+
+.pictures__tape {
+  width: 100%;
+  height: 100%;
+  grid-area: tape;
+  object-fit: cover;
+}
+
+.pictures__books {
+  width: 100%;
+  grid-area: books;
+}
+
+.pictures__title {
+  background-color: var(--accent-color);
+  margin-bottom: 20px;
+  max-width: 984px;
+}
+
+footer {
+  position: relative;
+  max-width: 1024px;
+  height: 768px;
+}
+
+.footer__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 157px;
+  line-height: 83%;
+  text-shadow: 2px 2px 0 #ff0070;
+  color: var(--title-color);
+  align-self: center;
+  justify-self: center;
+}
+
+.footer__cover {
+  height: 718px;
+  display: grid;
+}
+
+@media (width <=784px) and (width >= 392px) {
+  .header__theme-menu {
+    width: 70px;
+    height: 98px;
+    position: absolute;
+    top: 192px;
+    right: 20px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20px; */
+    justify-self: center;
+  }
+
+  .header__theme-menu-list:last-child {
+    margin-bottom: 0;
+  }
+
+  .header__theme-menu-item {
+    margin-bottom: 11.5px;
+  }
+
+  .title {
+    height: 978px;
+    gap: 162px;
+  }
+
+  .title__h1 {
+    font-size: 120px;
+  }
+
+  .title__description {
+    max-width: 364px;
+    max-height: 117px;
+  }
+
+  .why {
+    /* height: 648px; */
+  }
+
+  .why__title {
+    width: 206px;
+  }
+
+  .why__block {
+    /* max-width: 472px; 355 */
+    max-width: 472px;
+  }
+
+  .what {
+    /* height: 675px; */
+  }
+
+  .what__title {
+    width: 134px;
+  }
+
+  .what__cover {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
+    /* min-height: 575px; */
+  }
+
+  .what__block--text {
+    /* height: 141px; */
+    /* width: 728px; */
+  }
+
+
+  .what__block {
+    /* height: 174px; */
+  }
+
+  .how {
+    /* height: 1296px; */
+  }
+
+  .how__title {
+    max-width: 236px;
+  }
+
+  .how__cover {
+    width: 472px;
+  }
+
+  .pictures {
+    /* height: 823px; */
+  }
+
+  footer {
+    height: 1024px;
+  }
+
+  .footer__cover {
+    height: 974px;
+  }
+}
+
+/* 46 */
+/* 978 */
+
+
+@media (width <=391px) {
+
+  .header__theme-menu {
+    width: 70px;
+    height: 98px;
+    position: absolute;
+    top: 75px;
+    right: 20px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 20px; */
+    justify-self: center;
+  }
+
+  .header__theme-menu-list:last-child {
+    margin-bottom: 0;
+  }
+
+  .header__theme-menu-item {
+    margin-bottom: 11.5px;
+  }
+
+  .title {
+    gap: 55px;
+    height: 668px;
+  }
+
+  .title__description {
+    max-width: 364px;
+    max-height: 117px;
+  }
+
+  .why {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why__title {
+    margin-bottom: 20px;
+  }
+
+  .what__cover {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
+    /* min-height: 575px; */
+  }
+
+  .how {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .how__title {
+    margin-bottom: 20px;
+  }
+
+  .pictures__cover {
+    /* max-width: 984px; */
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0, 4fr 0, 667fr 1fr 0, 667fr 1fr;
+    display: grid;
+    grid-template-areas:
+      'sunset'
+      'ice-cream'
+      'tape'
+      'books'
+      'street'
+  }
+
+  footer {
+    height: 668px;
+  }
+
+  .footer__cover {
+    height: 598px;
+  }
 }
