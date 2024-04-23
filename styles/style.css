@@ -109,17 +109,6 @@ p.title__description {
 
 /* h46 */
 
-.first--rectangle {
-  border-right: 1px solid var(--h2-color);
-  border-top: 1px solid var(--h2-color);
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  /* left: auto; */
-  right: 20px;
-  top: 20px;
-}
-
 .first--rectangle__footer {
   border-right: 1px solid var(--h2-color);
   border-top: 1px solid var(--h2-color);

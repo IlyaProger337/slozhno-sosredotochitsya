@@ -11,6 +11,7 @@
     --title-color: #ffc2e6;
     --h2-color: #353430;
     --h3-color: #353430;
+    --font-family: 'IBM Plex mono';
     /* --focus-color: ; */
     /* var(--h2-color) */
   }
@@ -34,6 +35,7 @@
   --title-color: #ffc2e6;
   --h2-color: #353430;
   --h3-color: #353430;
+  --font-family: 'IBM Plex mono';
 }
 
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */

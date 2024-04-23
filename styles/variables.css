@@ -10,6 +10,7 @@
     --title-color: #ffc2e6;
     --h2-color: #353430;
     --h3-color: #353430;
+    --font-family: 'IBM Plex mono';
     /* var(--h2-color) */
   }
 }
@@ -21,6 +22,7 @@
     --title-color: #db00ff;
     --text-color: #f1b2ce;
     --h2-color: #ff0070;
-    --h3-color: #000028; 
-    }
+    --h3-color: #000028;
+    --font-family: 'IBM Plex mono';
+  }
 }
